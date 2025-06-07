@@ -18,6 +18,11 @@
             Entrée physique maximale
             <input type="number" id="maxValue" value="100">
         </label>
+        <label>
+            Linéarité
+            <input type="range" id="linearity" min="0.5" max="3" step="0.1" value="1">
+            <span id="linearityDisplay">1.0</span>
+        </label>
     </div>
 
     <div class="slider">
@@ -31,8 +36,10 @@
         <progress id="progressBar" max="16" value="8"></progress>
     </div>
 
+    <canvas id="curve" width="400" height="200"></canvas>
+
     <footer>
-        <p>Signal = 4 mA + 16 mA × (valeur - min) / (max - min)</p>
+        <p>Signal = 4 mA + 16 mA × [(valeur - min) / (max - min)]<sup>linéarité</sup></p>
     </footer>
 
     <script src="script.js"></script>
