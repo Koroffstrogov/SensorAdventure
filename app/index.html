@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensor Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sensor Adventure</h1>
+    <p>Simulez le réglage d'un capteur 4‑20 mA en jouant sur les paramètres ci-dessous.</p>
+
+    <div class="controls">
+        <label>
+            Entrée physique minimale
+            <input type="number" id="minValue" value="0">
+        </label>
+        <label>
+            Entrée physique maximale
+            <input type="number" id="maxValue" value="100">
+        </label>
+    </div>
+
+    <div class="slider">
+        <label for="physicalValue">Valeur physique mesurée :</label>
+        <input type="range" id="physicalValue" min="0" max="100" value="50">
+        <span id="physicalDisplay">50</span>
+    </div>
+
+    <div class="output">
+        <div>Signal calculé : <span id="mAOutput">12 mA</span></div>
+        <progress id="progressBar" min="4" max="20" value="12"></progress>
+    </div>
+
+    <footer>
+        <p>Signal = 4 mA + 16 mA × (valeur - min) / (max - min)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

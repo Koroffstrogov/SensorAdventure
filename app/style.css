@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background: #f7f7f7;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.controls label {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.slider {
+    margin: 1.5rem 0;
+}
+
+.output {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+progress {
+    width: 100%;
+    height: 2rem;
+}
